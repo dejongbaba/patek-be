@@ -1,0 +1,23 @@
+{
+  "connection": "default",
+  "collectionName": "careers",
+  "info": {
+    "name": "Career"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "jobs": {
+      "collection": "job"
+    },
+    "job": {
+      "via": "career",
+      "model": "job"
+    }
+  }
+}

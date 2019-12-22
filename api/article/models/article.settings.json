@@ -1,0 +1,35 @@
+{
+  "connection": "default",
+  "collectionName": "articles",
+  "info": {
+    "name": "Article"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "date": {
+      "type": "date"
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "category": {
+      "model": "category",
+      "via": "article"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "introduction": {
+      "type": "richtext"
+    }
+  }
+}
