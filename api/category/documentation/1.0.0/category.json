@@ -552,7 +552,7 @@
               "description": {
                 "type": "string"
               },
-              "Introduction": {
+              "preview": {
                 "type": "string"
               }
             }

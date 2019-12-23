@@ -28,7 +28,7 @@
     "description": {
       "type": "richtext"
     },
-    "introduction": {
+    "preview": {
       "type": "richtext"
     }
   }
