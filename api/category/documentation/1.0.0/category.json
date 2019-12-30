@@ -551,6 +551,9 @@
               },
               "preview": {
                 "type": "string"
+              },
+              "category": {
+                "type": "string"
               }
             }
           }

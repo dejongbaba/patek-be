@@ -582,6 +582,23 @@
           },
           "preview": {
             "type": "string"
+          },
+          "category": {
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "articles": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -597,6 +614,9 @@
             "type": "string"
           },
           "preview": {
+            "type": "string"
+          },
+          "category": {
             "type": "string"
           }
         }
