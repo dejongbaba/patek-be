@@ -19,13 +19,15 @@
       "required": false
     },
     "title": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 25
     },
     "description": {
       "type": "richtext"
     },
     "preview": {
-      "type": "richtext"
+      "type": "richtext",
+      "maxLength": 85
     },
     "category": {
       "model": "category"
