@@ -526,7 +526,7 @@
           "name": {
             "type": "string"
           },
-          "article": {
+          "articles": {
             "required": [
               "id"
             ],
@@ -542,9 +542,6 @@
                 "items": {
                   "type": "string"
                 }
-              },
-              "category": {
-                "type": "string"
               },
               "title": {
                 "type": "string"
@@ -567,7 +564,7 @@
           "name": {
             "type": "string"
           },
-          "article": {
+          "articles": {
             "type": "string"
           }
         }

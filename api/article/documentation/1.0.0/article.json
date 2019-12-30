@@ -574,23 +574,6 @@
               }
             }
           },
-          "category": {
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "article": {
-                "type": "string"
-              }
-            }
-          },
           "title": {
             "type": "string"
           },
@@ -605,9 +588,6 @@
       "NewArticle": {
         "properties": {
           "date": {
-            "type": "string"
-          },
-          "category": {
             "type": "string"
           },
           "title": {

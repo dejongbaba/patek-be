@@ -18,10 +18,6 @@
       "plugin": "upload",
       "required": false
     },
-    "category": {
-      "model": "category",
-      "via": "article"
-    },
     "title": {
       "type": "string"
     },
