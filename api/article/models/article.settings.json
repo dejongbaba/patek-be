@@ -20,14 +20,14 @@
     },
     "title": {
       "type": "string",
-      "maxLength": 25
+      "maxLength": 50
     },
     "description": {
       "type": "richtext"
     },
     "preview": {
       "type": "richtext",
-      "maxLength": 85
+      "maxLength": 140
     },
     "category": {
       "model": "category"
