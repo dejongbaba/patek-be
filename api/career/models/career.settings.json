@@ -14,10 +14,6 @@
     },
     "jobs": {
       "collection": "job"
-    },
-    "job": {
-      "via": "career",
-      "model": "job"
     }
   }
 }

@@ -575,13 +575,15 @@
             }
           },
           "title": {
-            "type": "string"
+            "type": "string",
+            "maxLength": 25
           },
           "description": {
             "type": "string"
           },
           "preview": {
-            "type": "string"
+            "type": "string",
+            "maxLength": 85
           },
           "category": {
             "required": [
@@ -608,13 +610,15 @@
             "type": "string"
           },
           "title": {
-            "type": "string"
+            "type": "string",
+            "maxLength": 25
           },
           "description": {
             "type": "string"
           },
           "preview": {
-            "type": "string"
+            "type": "string",
+            "maxLength": 85
           },
           "category": {
             "type": "string"

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "12/30/2019 2:25:13 PM"
+    "x-generation-date": "12/31/2019 2:41:52 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -4818,13 +4818,15 @@
             }
           },
           "title": {
-            "type": "string"
+            "type": "string",
+            "maxLength": 25
           },
           "description": {
             "type": "string"
           },
           "preview": {
-            "type": "string"
+            "type": "string",
+            "maxLength": 85
           },
           "category": {
             "required": [
@@ -4851,13 +4853,15 @@
             "type": "string"
           },
           "title": {
-            "type": "string"
+            "type": "string",
+            "maxLength": 25
           },
           "description": {
             "type": "string"
           },
           "preview": {
-            "type": "string"
+            "type": "string",
+            "maxLength": 85
           },
           "category": {
             "type": "string"
@@ -4893,25 +4897,6 @@
                 "type": "string"
               }
             }
-          },
-          "job": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "Description": {
-                "type": "string"
-              },
-              "career": {
-                "type": "string"
-              }
-            }
           }
         }
       },
@@ -4921,9 +4906,6 @@
             "type": "string"
           },
           "jobs": {
-            "type": "string"
-          },
-          "job": {
             "type": "string"
           }
         }
@@ -5012,9 +4994,6 @@
                 "type": "string"
               },
               "jobs": {
-                "type": "string"
-              },
-              "job": {
                 "type": "string"
               }
             }

@@ -16,8 +16,7 @@
       "type": "richtext"
     },
     "career": {
-      "model": "career",
-      "via": "job"
+      "model": "career"
     }
   }
 }

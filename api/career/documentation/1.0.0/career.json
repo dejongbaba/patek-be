@@ -543,25 +543,6 @@
                 "type": "string"
               }
             }
-          },
-          "job": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "Description": {
-                "type": "string"
-              },
-              "career": {
-                "type": "string"
-              }
-            }
           }
         }
       },
@@ -571,9 +552,6 @@
             "type": "string"
           },
           "jobs": {
-            "type": "string"
-          },
-          "job": {
             "type": "string"
           }
         }
