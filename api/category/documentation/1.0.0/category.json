@@ -537,12 +537,6 @@
               "date": {
                 "type": "string"
               },
-              "image": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "title": {
                 "type": "string"
               },

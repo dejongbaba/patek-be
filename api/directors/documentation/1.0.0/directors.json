@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/articles": {
+    "/directors": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the directors's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve directors document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Article"
+                    "$ref": "#/components/schemas/Directors"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Article"
+          "Directors"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new directors record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve directors document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Article"
+                  "$ref": "#/components/schemas/Directors"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Article"
+          "Directors"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewArticle"
+                "$ref": "#/components/schemas/NewDirectors"
               }
             }
           }
         }
       }
     },
-    "/articles/count": {
+    "/directors/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the numver of directors documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve directors document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Article"
+          "Directors"
         ],
         "parameters": []
       }
     },
-    "/articles/{id}": {
+    "/directors/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one directors record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve directors document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Article"
+                  "$ref": "#/components/schemas/Directors"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Article"
+          "Directors"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single directors record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve directors document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Article"
+                  "$ref": "#/components/schemas/Directors"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Article"
+          "Directors"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewArticle"
+                "$ref": "#/components/schemas/NewDirectors"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single directors record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single directors based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Article"
+          "Directors"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Article": {
+      "Directors": {
         "required": [
           "id"
         ],
@@ -522,56 +522,69 @@
           "id": {
             "type": "string"
           },
-          "date": {
+          "name": {
             "type": "string"
           },
-          "title": {
-            "type": "string",
-            "maxLength": 25
-          },
-          "description": {
+          "role": {
             "type": "string"
           },
-          "preview": {
-            "type": "string",
-            "maxLength": 85
-          },
-          "category": {
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "articles": {
-                "type": "string"
+          "image": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "hash",
+                "mime",
+                "size",
+                "url",
+                "provider"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "hash": {
+                  "type": "string"
+                },
+                "sha256": {
+                  "type": "string"
+                },
+                "ext": {
+                  "type": "string"
+                },
+                "mime": {
+                  "type": "string"
+                },
+                "size": {
+                  "type": "number"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "provider": {
+                  "type": "string"
+                },
+                "provider_metadata": {
+                  "type": "object"
+                },
+                "related": {
+                  "type": "string"
+                }
               }
             }
           }
         }
       },
-      "NewArticle": {
+      "NewDirectors": {
         "properties": {
-          "date": {
+          "name": {
             "type": "string"
           },
-          "title": {
-            "type": "string",
-            "maxLength": 25
-          },
-          "description": {
-            "type": "string"
-          },
-          "preview": {
-            "type": "string",
-            "maxLength": 85
-          },
-          "category": {
+          "role": {
             "type": "string"
           }
         }
@@ -580,7 +593,7 @@
   },
   "tags": [
     {
-      "name": "Article"
+      "name": "Directors"
     }
   ]
 }

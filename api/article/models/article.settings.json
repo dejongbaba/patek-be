@@ -12,22 +12,16 @@
     "date": {
       "type": "date"
     },
-    "image": {
-      "collection": "file",
-      "via": "related",
-      "plugin": "upload",
-      "required": false
-    },
     "title": {
       "type": "string",
-      "maxLength": 50
+      "maxLength": 25
     },
     "description": {
       "type": "richtext"
     },
     "preview": {
       "type": "richtext",
-      "maxLength": 140
+      "maxLength": 85
     },
     "category": {
       "model": "category"

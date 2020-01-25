@@ -1,0 +1,22 @@
+{
+  "info": {
+    "name": "sustainability"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "description_two": {
+      "type": "richtext"
+    }
+  },
+  "connection": "default",
+  "collectionName": "sustainabilities"
+}

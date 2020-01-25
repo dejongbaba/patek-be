@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/articles": {
+    "/values": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the values's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve values document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Article"
+                    "$ref": "#/components/schemas/Values"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Article"
+          "Values"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new values record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve values document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Article"
+                  "$ref": "#/components/schemas/Values"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Article"
+          "Values"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewArticle"
+                "$ref": "#/components/schemas/NewValues"
               }
             }
           }
         }
       }
     },
-    "/articles/count": {
+    "/values/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the numver of values documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve values document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Article"
+          "Values"
         ],
         "parameters": []
       }
     },
-    "/articles/{id}": {
+    "/values/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one values record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve values document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Article"
+                  "$ref": "#/components/schemas/Values"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Article"
+          "Values"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single values record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve values document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Article"
+                  "$ref": "#/components/schemas/Values"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Article"
+          "Values"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewArticle"
+                "$ref": "#/components/schemas/NewValues"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single values record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single values based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Article"
+          "Values"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Article": {
+      "Values": {
         "required": [
           "id"
         ],
@@ -522,56 +522,20 @@
           "id": {
             "type": "string"
           },
-          "date": {
+          "name": {
             "type": "string"
-          },
-          "title": {
-            "type": "string",
-            "maxLength": 25
           },
           "description": {
             "type": "string"
-          },
-          "preview": {
-            "type": "string",
-            "maxLength": 85
-          },
-          "category": {
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "articles": {
-                "type": "string"
-              }
-            }
           }
         }
       },
-      "NewArticle": {
+      "NewValues": {
         "properties": {
-          "date": {
+          "name": {
             "type": "string"
-          },
-          "title": {
-            "type": "string",
-            "maxLength": 25
           },
           "description": {
-            "type": "string"
-          },
-          "preview": {
-            "type": "string",
-            "maxLength": 85
-          },
-          "category": {
             "type": "string"
           }
         }
@@ -580,7 +544,7 @@
   },
   "tags": [
     {
-      "name": "Article"
+      "name": "Values"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/articles": {
+    "/homes": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Article"
+                    "$ref": "#/components/schemas/Home"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Article"
+          "Home"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Article"
+                  "$ref": "#/components/schemas/Home"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Article"
+          "Home"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewArticle"
+                "$ref": "#/components/schemas/NewHome"
               }
             }
           }
         }
       }
     },
-    "/articles/count": {
+    "/homes/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Article"
+          "Home"
         ],
         "parameters": []
       }
     },
-    "/articles/{id}": {
+    "/homes/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Article"
+                  "$ref": "#/components/schemas/Home"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Article"
+          "Home"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Article"
+                  "$ref": "#/components/schemas/Home"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Article"
+          "Home"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewArticle"
+                "$ref": "#/components/schemas/NewHome"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Article"
+          "Home"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Article": {
+      "Home": {
         "required": [
           "id"
         ],
@@ -522,56 +522,26 @@
           "id": {
             "type": "string"
           },
-          "date": {
+          "title": {
             "type": "string"
           },
-          "title": {
-            "type": "string",
-            "maxLength": 25
+          "subtitle": {
+            "type": "string"
           },
           "description": {
             "type": "string"
-          },
-          "preview": {
-            "type": "string",
-            "maxLength": 85
-          },
-          "category": {
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "articles": {
-                "type": "string"
-              }
-            }
           }
         }
       },
-      "NewArticle": {
+      "NewHome": {
         "properties": {
-          "date": {
+          "title": {
             "type": "string"
           },
-          "title": {
-            "type": "string",
-            "maxLength": 25
+          "subtitle": {
+            "type": "string"
           },
           "description": {
-            "type": "string"
-          },
-          "preview": {
-            "type": "string",
-            "maxLength": 85
-          },
-          "category": {
             "type": "string"
           }
         }
@@ -580,7 +550,7 @@
   },
   "tags": [
     {
-      "name": "Article"
+      "name": "Home"
     }
   ]
 }
