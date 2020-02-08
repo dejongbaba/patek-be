@@ -22,7 +22,7 @@
   },
   "cors": {
     "enabled": true,
-    "origin": "http://localhost:3002",
+    "origin": "*",
     "methods": [
       "GET",
       "POST",
@@ -41,8 +41,7 @@
       "Accept",
       "Client-Security-Token",
       "Accept-Encoding",
-      "X-Auth-Token",
-      "content-type"
+      "X-Auth-Token"
     ]
   },
   "ip": {
