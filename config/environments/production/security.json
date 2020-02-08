@@ -22,7 +22,28 @@
   },
   "cors": {
     "enabled": true,
-    "origin": "*"
+    "origin": "*",
+    "methods": [
+      "GET",
+      "POST",
+      "PUT",
+      "PATCH",
+      "DELETE",
+      "OPTIONS",
+      "HEAD"
+    ],
+    "headers": [
+      "Content-Type",
+      "Authorization",
+      "X-Frame-Options",
+      "Origin",
+      "X-Requested-With",
+      "Accept",
+      "Client-Security-Token",
+      "Accept-Encoding",
+      "X-Auth-Token",
+      "content-type"
+    ]
   },
   "ip": {
     "enabled": false,
