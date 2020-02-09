@@ -23,6 +23,12 @@
   "cors": {
     "enabled": true,
     "origin": "*",
+    "maxAge": 31536000,
+    "expose": [
+      "WWW-Authenticate",
+      "Server-Authorization"
+    ],
+    "credentials": false,
     "methods": [
       "GET",
       "POST",
