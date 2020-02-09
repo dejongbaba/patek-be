@@ -22,7 +22,7 @@
   },
   "cors": {
     "enabled": true,
-    "origin": "*"
+    "origin": "https://patek.netlify.com/"
   },
   "ip": {
     "enabled": false,
