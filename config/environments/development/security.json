@@ -21,8 +21,8 @@
     "mode": "block"
   },
   "cors": {
-    "enabled": true,
-    "origin": "https://patek.netlify.com/"
+    "enabled": false,
+    "origin": "*"
   },
   "ip": {
     "enabled": false,
