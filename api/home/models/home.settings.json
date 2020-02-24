@@ -1,4 +1,6 @@
 {
+  "connection": "default",
+  "collectionName": "homes",
   "info": {
     "name": "Home"
   },
@@ -15,8 +17,9 @@
     },
     "description": {
       "type": "richtext"
+    },
+    "link": {
+      "type": "string"
     }
-  },
-  "connection": "default",
-  "collectionName": "homes"
+  }
 }
