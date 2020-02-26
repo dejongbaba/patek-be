@@ -530,6 +530,9 @@
           },
           "description": {
             "type": "string"
+          },
+          "link": {
+            "type": "string"
           }
         }
       },
@@ -542,6 +545,9 @@
             "type": "string"
           },
           "description": {
+            "type": "string"
+          },
+          "link": {
             "type": "string"
           }
         }

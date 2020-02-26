@@ -1,0 +1,19 @@
+{
+  "info": {
+    "name": "social media links"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    }
+  },
+  "connection": "default",
+  "collectionName": "social_media_links"
+}
